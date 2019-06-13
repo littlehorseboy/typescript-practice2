@@ -1,5 +1,7 @@
-enum Color {Red, Green, Blue};
+enum Color { Red, Green, Blue };
 
-const c: Color =  Color.Green;
+const r: Color =  Color.Red;
+const g: Color =  Color.Green;
+const b: Color =  Color.Blue;
 
-console.log(c);
+console.log(r, g, b);
