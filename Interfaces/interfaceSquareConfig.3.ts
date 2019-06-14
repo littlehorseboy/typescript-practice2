@@ -1,6 +1,7 @@
 interface SquareConfig {
   color?: string;
   width?: number;
+  [propName: string]: any;
 }
 
 function createSquare(config: SquareConfig): { color: string; area: number } {
@@ -17,6 +18,6 @@ function createSquare(config: SquareConfig): { color: string; area: number } {
   return newSquare;
 }
 
-const mySquare = createSquare({ colour: 'black', width: 100 } as SquareConfig);
+const mySquare = createSquare({ colour: 'black', width: 100 });
 
 console.log(mySquare);
