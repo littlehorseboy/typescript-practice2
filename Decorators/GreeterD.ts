@@ -1,4 +1,4 @@
-function classDecorator<T extends {new(...args:any[]):{}}>(constructor:T) {
+function classDecorator<T extends { new (...args: any[]): {} }>(constructor: T) {
   return class extends constructor {
       newProperty = "new property";
       hello = "override";
@@ -6,7 +6,7 @@ function classDecorator<T extends {new(...args:any[]):{}}>(constructor:T) {
 }
 
 @classDecorator
-class Greeter {
+class GreeterD {
   property = "property";
   hello: string;
   constructor(m: string) {
@@ -14,4 +14,4 @@ class Greeter {
   }
 }
 
-console.log(new Greeter("world"));
+console.log(new GreeterD("world"));
